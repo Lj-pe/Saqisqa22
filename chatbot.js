@@ -1,3 +1,6 @@
+/* =============================
+   RESPUESTAS DEL CHATBOT
+============================= */
 const respuestasIA = [
   {
     palabras: ["hola", "buenas"],
@@ -5,7 +8,7 @@ const respuestasIA = [
   },
   {
     palabras: ["precio", "costo", "vale"],
-    respuesta: "Los precios varían según el diseño. Escríbenos por WhatsApp y te cotizamos rápido 📲"
+    respuesta: "Los precios varían según el diseño 👕. Escríbenos por WhatsApp y te cotizamos rápido 📲"
   },
   {
     palabras: ["envio", "envíos", "delivery"],
@@ -13,37 +16,70 @@ const respuestasIA = [
   },
   {
     palabras: ["personalizado", "diseño"],
-    respuesta: "¡Sí! Hacemos diseños personalizados. Puedes enviarnos tu idea por WhatsApp ✨"
+    respuesta: "¡Sí! Hacemos diseños personalizados ✨ Puedes enviarnos tu idea por WhatsApp."
+  },
+  {
+    palabras: ["contacto", "whatsapp", "instagram"],
+    respuesta: "Puedes contactarnos por WhatsApp o Instagram 📲. ¡Te respondemos rápido!"
   }
 ];
 
-function responderIA(mensaje) {
-  mensaje = mensaje.toLowerCase();
+/* =============================
+   LÓGICA DEL BOT
+============================= */
+function responderIA(texto) {
+  texto = texto.toLowerCase();
 
   for (let i = 0; i < respuestasIA.length; i++) {
     for (let j = 0; j < respuestasIA[i].palabras.length; j++) {
-      if (mensaje.includes(respuestasIA[i].palabras[j])) {
+      if (texto.includes(respuestasIA[i].palabras[j])) {
         return respuestasIA[i].respuesta;
       }
     }
   }
 
-  return "No estoy seguro 🤔. ¿Deseas hablar directamente por WhatsApp?";
+  return "No estoy seguro 🤔 ¿Quieres que te derive a WhatsApp?";
 }
+
+/* =============================
+   MENSAJES
+============================= */
 function enviarMensaje() {
   const input = document.getElementById("mensaje");
-  const chat = document.getElementById("chat-mensajes");
+  const texto = input.value.trim();
+  if (texto === "") return;
 
-  if (input.value === "") return;
-
-  chat.innerHTML += `<div class="user">${input.value}</div>`;
-
-  const respuesta = responderIA(input.value);
+  agregarMensaje(texto, "user");
+  input.value = "";
 
   setTimeout(() => {
-    chat.innerHTML += `<div class="bot">${respuesta}</div>`;
-    chat.scrollTop = chat.scrollHeight;
+    const respuesta = responderIA(texto);
+    agregarMensaje(respuesta, "bot");
   }, 600);
-
-  input.value = "";
 }
+
+function agregarMensaje(texto, tipo) {
+  const chat = document.getElementById("chat-mensajes");
+  const div = document.createElement("div");
+  div.className = tipo;
+  div.textContent = texto;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+/* =============================
+   ABRIR / CERRAR CHAT
+============================= */
+const chatToggle = document.getElementById("chat-toggle");
+const chatContainer = document.getElementById("chat-container");
+const chatClose = document.getElementById("chat-close");
+
+chatToggle.addEventListener("click", () => {
+  chatContainer.classList.remove("cerrado");
+  chatToggle.style.display = "none";
+});
+
+chatClose.addEventListener("click", () => {
+  chatContainer.classList.add("cerrado");
+  chatToggle.style.display = "flex";
+});
