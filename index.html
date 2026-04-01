@@ -1,167 +1,387 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Nombre de la Marca | Diseño de Ropa</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saqisqa 22 — Tu concepto, nuestras manos</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos externa -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="logo">
-            <span class="logo-icon">🧵</span>
-            <span class="logo-text"></span>
-            <span class="logo-accent">Saqisqa22</span>
-        </div>
-        <nav class="nav">
-            <a href="#inicio">Inicio</a>
-            <a href="#trabajos">¿Quienes Somos?</a>
-            <a href="#disenos">Misión</a>
-            <a href="#sobre">Visión</a>
-            <a href="#contacto">Valores</a>
-            <a href="#contacto">Objetivo</a>
-            <a href="#contacto">Propósito</a>
-            <a href="#contacto">Posicionamiento</a>
-            <a href="#contacto">Público Objetivo</a>
-        </nav>
-    </header>
+<!-- ══════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<nav>
+  <a href="#hero" class="nav-logo">SAQISQA <span>22</span></a>
+  <ul class="nav-links">
+    <li><a href="#adn">Nuestra Esencia</a></li>
+    <li><a href="#proceso">El Proceso</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#redes">Redes</a></li>
+    <li><a href="#contacto" class="nav-cta">Encargar pieza</a></li>
+  </ul>
+</nav>
 
-    <!-- HERO / INICIO -->
-<section id="inicio" class="hero">
 
-    <div class="slides">
-        <div class="slide activo" style="background-image: url('img/portada.jpg');"></div>
-        <div class="slide" style="background-image: url('img/portada1.jpg');"></div>
-        <div class="slide" style="background-image: url('img/portada2.jpg');"></div>
+<!-- ══════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section id="hero">
+
+  <!-- Lado izquierdo: título principal -->
+  <div class="hero-left">
+    <div class="hero-number">22</div>
+    <div class="hero-left-content">
+      <span class="hero-eyebrow">Artesanía de autor · Lima, Perú</span>
+      <h1 class="hero-title">
+        Tu idea,<br>
+        <span class="hero-title-italic">materializada.</span>
+      </h1>
+      <p class="hero-sub">Cuero &amp; Textil · Co-Creación · Piezas únicas</p>
     </div>
+  </div>
 
-    <!-- Flechas de navegación -->
-    <button class="flecha izquierda">‹</button>
-    <button class="flecha derecha">›</button>
-
-    <div class="hero-texto">
-        <h1>Diseño y confección de ropa personalizada</h1>
-        <p>Prendas únicas, polos y buzos hechos a medida</p>
-        <a href="#trabajos" class="btn">Ver trabajos</a>
+  <!-- Lado derecho: tagline + botón -->
+  <div class="hero-right">
+    <p class="hero-tagline">
+      En <strong>Saqisqa 22</strong> no fabricamos objetos; materializamos voluntades.
+      Somos el puente entre la idea abstracta y la materia noble. Creemos que el
+      verdadero lujo está en la historia que <strong>co-creamos contigo</strong>.
+    </p>
+    <div class="hero-pills">
+      <span class="pill">Hecho a mano</span>
+      <span class="pill">Pieza única</span>
+      <span class="pill">Cuero genuino</span>
+      <span class="pill">A tu medida</span>
     </div>
+    <a href="#contacto" class="hero-btn">
+      Comenzar mi proyecto
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
 
 </section>
 
 
-    <!-- TRABAJOS REALIZADOS -->
-    <section id="trabajos" class="seccion">
-        <h2>Trabajos realizados</h2>
-        <p class="descripcion">Algunos diseños y prendas que he realizado.</p>
+<!-- ══════════════════════════════════════
+     MANIFIESTO
+════════════════════════════════════════ -->
+<section id="manifiesto">
+  <div class="manifiesto-content reveal">
+    <div class="section-label">Nuestro Manifiesto</div>
+    <p class="manifiesto-text">
+      "No creemos en las vitrinas llenas de objetos idénticos. Creemos que el mundo ya
+      tiene suficientes cosas sin alma. Por eso, en Saqisqa 22, el proceso no empieza
+      en un trozo de cuero; empieza en tu mente. Nuestras manos son el puente. Cada
+      puntada es un compromiso con la durabilidad, cada corte es un respeto al material
+      y cada pieza terminada lleva tu ADN y nuestro oficio."
+    </p>
+    <div class="manifiesto-firma">— Saqisqa 22</div>
+  </div>
+</section>
 
-        <div class="galeria">
-            <div class="card">
-                <img src="img/trabajo1.jpg" alt="Trabajo 1">
-                <p>Polo personalizado</p>
-            </div>
-            <div class="card">
-                <img src="img/trabajo2.jpg" alt="Trabajo 2">
-                <p>Prenda a medida</p>
-            </div>
-            <div class="card">
-                <img src="img/trabajo3.jpg" alt="Trabajo 3">
-                <p>Diseño urbano</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- DISEÑOS / INSPIRACIÓN -->
-    <section id="disenos" class="seccion gris">
-        <h2>Diseños & Estilo</h2>
-        <p class="descripcion">
-            Ideas y estilos que puedo desarrollar bajo pedido.
-        </p>
+<!-- ══════════════════════════════════════
+     ADN / PILARES
+════════════════════════════════════════ -->
+<section id="adn">
 
-        <div class="galeria">
-            <div class="card">
-                <img src="img/diseño1.jpg" alt="Diseño 1">
-            </div>
-            <div class="card">
-                <img src="img/diseño2.jpg" alt="Diseño 2">
-            </div>
-            <div class="card">
-                <img src="img/diseño3.jpg" alt="Diseño 3">
-            </div>
-        </div>
-    </section>
-
-    <!-- SOBRE MI -->
-    <section id="sobre" class="seccion">
-        <h2>Sobre mí</h2>
-        <div class="sobre-contenido">
-            <p>
-                Soy diseñador de ropa independiente. Empecé en este rubro creando
-                polos personalizados y prendas a pedido, buscando siempre reflejar
-                la identidad de cada persona en cada diseño.
-            </p>
-            <p>
-                Mi enfoque es crear ropa con personalidad, cuidando cada detalle
-                desde la idea hasta la confección final.
-            </p>
-        </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="seccion gris" id="contacto">
-        <h2>Contacto</h2>
-        <p class="descripcion">¿Tienes una idea en mente? Conversemos.</p>
-
-    <div class="contacto-links">
-    <a href="https://wa.me/51999999999" target="_blank" class="icono whatsapp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <a href="https://www.instagram.com/" target="_blank" class="icono instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="https://www.facebook.com/" target="_blank" class="icono facebook">
-        <i class="fab fa-facebook-f"></i>
-    </a>
+  <div class="adn-header reveal">
+    <div>
+      <div class="section-label">Nuestra Esencia</div>
+      <h2 class="section-title">El ADN de<br><em>Saqisqa 22</em></h2>
     </div>
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© 2026 Nombre de la Marca</p>
-    </footer>
-
-<!-- JS -->
-<script src="java.js"></script>
-<!-- CHAT IA -->
-<!-- BOTÓN FLOTANTE DEL CHAT -->
-<div id="chat-toggle">💬</div>
-
-<!-- CONTENEDOR DEL CHAT -->
-<div id="chat-container" class="cerrado">
-  <div id="chat-header">
-    🤖 Asistente Mi Ropa
-    <span id="chat-close">✖</span>
+    <p class="adn-intro">
+      Cuatro pilares que se entrelazan para definir quiénes somos, cómo trabajamos
+      y por qué cada pieza que sale de nuestro taller es irrepetible por definición.
+      No vendemos colecciones; construimos colaboraciones.
+    </p>
   </div>
 
-  <div id="chat-mensajes"></div>
-
-  <div id="chat-input">
-    <input type="text" id="mensaje" placeholder="Escribe tu mensaje..." />
-    <button onclick="enviarMensaje()">Enviar</button>
+  <div class="pilares-grid reveal">
+    <div class="pilar">
+      <div class="pilar-num">01</div>
+      <h3 class="pilar-title">Co-Creación</h3>
+      <p class="pilar-text">Tu idea es el alma, nuestras manos son el cuerpo. El cliente no es un espectador, es el autor de cada pieza.</p>
+    </div>
+    <div class="pilar">
+      <div class="pilar-num">02</div>
+      <h3 class="pilar-title">Identidad Híbrida</h3>
+      <p class="pilar-text">La firmeza del cuero y la calidez del textil en perfecta armonía. Resistencia y sensibilidad en cada fibra.</p>
+    </div>
+    <div class="pilar">
+      <div class="pilar-num">03</div>
+      <h3 class="pilar-title">El Valor del 22</h3>
+      <p class="pilar-text">Dualidad y equilibrio. El binomio perfecto donde dos visiones —artesana y cliente— se vuelven una sola pieza única.</p>
+    </div>
+    <div class="pilar">
+      <div class="pilar-num">04</div>
+      <h3 class="pilar-title">Legado Consciente</h3>
+      <p class="pilar-text">Rechazamos lo desechable. Cada pieza está diseñada para envejecer con dignidad y contar una historia por generaciones.</p>
+    </div>
   </div>
-</div>
 
-<script src="chatbot.js"></script>
+</section>
 
+
+<!-- ══════════════════════════════════════
+     PROCESO DE CO-CREACIÓN
+════════════════════════════════════════ -->
+<section id="proceso">
+
+  <div class="proceso-header reveal">
+    <div class="section-label">Cómo trabajamos</div>
+    <h2 class="section-title">El proceso de <em>co-creación</em></h2>
+  </div>
+
+  <div class="proceso-steps reveal">
+    <div class="step">
+      <div class="step-circle">✦</div>
+      <h3 class="step-title">Tu Concepto</h3>
+      <p class="step-text">Nos compartes tu idea, visión o referencia. Aquí nace todo.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">◈</div>
+      <h3 class="step-title">Diseño Conjunto</h3>
+      <p class="step-text">Trabajamos juntos el boceto, materiales y detalles técnicos.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">⬡</div>
+      <h3 class="step-title">Elaboración</h3>
+      <p class="step-text">Manos expertas dan vida a cada puntada en cuero y textil.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">✿</div>
+      <h3 class="step-title">Tu Pieza Única</h3>
+      <p class="step-text">Recibes un objeto irrepetible con tu historia y nuestro oficio.</p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════
+     NOSOTROS
+════════════════════════════════════════ -->
+<section id="nosotros">
+
+  <!-- Visual decorativo izquierda -->
+  <div class="nosotros-visual reveal">
+    <div class="nosotros-frame frame-main">
+      <div class="frame-main-inner">
+        <span class="frame-icon">🧵</span>
+        <p class="frame-quote">"Tu concepto,<br>nuestras manos,<br>una pieza única."</p>
+      </div>
+    </div>
+    <div class="nosotros-frame frame-accent">
+      <div>
+        <div class="frame-accent-text">22</div>
+        <span class="frame-accent-sub">maestría</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Texto derecha -->
+  <div class="reveal">
+    <div class="section-label">Sobre nosotros</div>
+    <h2 class="section-title">Artesanía de<br><em>autor, Lima</em></h2>
+    <p class="nosotros-desc">
+      Saqisqa 22 nace de la unión entre la voluntad creativa del cliente y la
+      precisión técnica de la artesana. El nombre honra nuestras raíces peruanas
+      —<em>saqisqa</em>, raíz quechua— mientras mira hacia el diseño de autor moderno.
+    </p>
+    <div class="nosotros-mision">
+      <div class="mision-item">
+        <div class="mision-label">Misión</div>
+        <p class="mision-text">Transformar las ideas de nuestros clientes en artículos únicos de cuero y textil, mediante técnicas artesanales de alta calidad que dan vida a piezas con historia propia.</p>
+      </div>
+      <div class="mision-item">
+        <div class="mision-label">Visión</div>
+        <p class="mision-text">Ser el taller referente en co-creación de autor, donde la colaboración entre cliente y artesana redefine el valor del lujo hecho a mano.</p>
+      </div>
+      <div class="mision-item">
+        <div class="mision-label">Propósito</div>
+        <p class="mision-text">Existimos para que nadie tenga que conformarse con lo que ofrece el mercado masivo cuando puede tener algo que nació de su propia mente.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════
+     REDES SOCIALES
+════════════════════════════════════════ -->
+<section id="redes">
+
+  <div class="reveal">
+    <div class="section-label" style="justify-content:center;">Síguenos</div>
+    <h2 class="section-title" style="text-align:center;">Encuéntranos en <em>redes</em></h2>
+    <p class="redes-sub">Detrás de escena, procesos y piezas únicas. Únete a la comunidad.</p>
+  </div>
+
+  <div class="redes-grid reveal">
+
+    <!-- Instagram — cambia el href por tu link real -->
+    <a href="https://instagram.com/saqisqa22" target="_blank" rel="noopener" class="red-card">
+      <div class="red-icon">📸</div>
+      <span class="red-name">Instagram</span>
+      <span class="red-handle">@saqisqa22</span>
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://tiktok.com/@saqisqa22" target="_blank" rel="noopener" class="red-card">
+      <div class="red-icon">🎵</div>
+      <span class="red-name">TikTok</span>
+      <span class="red-handle">@saqisqa22</span>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://facebook.com/saqisqa22" target="_blank" rel="noopener" class="red-card">
+      <div class="red-icon">📘</div>
+      <span class="red-name">Facebook</span>
+      <span class="red-handle">Saqisqa 22</span>
+    </a>
+
+    <!-- WhatsApp — cambia el número -->
+    <a href="https://wa.me/51999999999" target="_blank" rel="noopener" class="red-card">
+      <div class="red-icon">💬</div>
+      <span class="red-name">WhatsApp</span>
+      <span class="red-handle">Escribir ahora</span>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     CONTACTO + FORMULARIO
+════════════════════════════════════════ -->
+<section id="contacto">
+
+  <!-- Info de contacto -->
+  <div class="contacto-info reveal">
+    <div class="section-label">Comenzar</div>
+    <h2 class="section-title">Cuéntanos tu<br><em>idea</em></h2>
+    <p class="contacto-desc">
+      Cada proyecto comienza con una conversación. Compártenos tu concepto,
+      el material que te imaginas, el uso que le darás y nosotras nos encargamos
+      del resto. No hay visión demasiado grande ni demasiado pequeña.
+    </p>
+    <div class="contacto-datos">
+      <div class="dato">
+        <div class="dato-icon">📍</div>
+        Lima, Perú — envíos nacionales e internacionales
+      </div>
+      <div class="dato">
+        <div class="dato-icon">✉️</div>
+        hola@saqisqa22.com
+      </div>
+      <div class="dato">
+        <div class="dato-icon">⏱️</div>
+        Respondemos en menos de 24 horas
+      </div>
+    </div>
+  </div>
+
+  <!-- Formulario -->
+  <div class="form-card reveal">
+    <h3 class="form-title">Iniciar mi proyecto</h3>
+    <p class="form-sub">Tu Munay empieza aquí ✦</p>
+
+    <div id="form-fields">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Tu nombre">
+        </div>
+        <div class="form-group">
+          <label for="ciudad">Ciudad / País</label>
+          <input type="text" id="ciudad" placeholder="Lima, Perú">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="correo@ejemplo.com">
+      </div>
+
+      <div class="form-group">
+        <label for="tipo">Tipo de pieza</label>
+        <select id="tipo">
+          <option value="" disabled selected>¿Qué te imaginas?</option>
+          <option>Bolso / Cartera</option>
+          <option>Mochila</option>
+          <option>Accesorios (billetera, llavero...)</option>
+          <option>Artículo textil</option>
+          <option>Combinación cuero + textil</option>
+          <option>Otro / Sorpréndeme</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Cuéntame tu idea</label>
+        <textarea id="mensaje" placeholder="Describe tu visión: colores, uso, referencias, materiales que te gustan... No hay límites."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="origen">¿Cómo nos encontraste?</label>
+        <select id="origen">
+          <option value="" disabled selected>Seleccionar</option>
+          <option>Instagram</option>
+          <option>TikTok</option>
+          <option>Facebook</option>
+          <option>Recomendación</option>
+          <option>Otro</option>
+        </select>
+      </div>
+
+      <!-- El onclick llama a la función en main.js -->
+      <button class="form-btn" onclick="enviarFormulario()">
+        ✦ Enviar mi concepto
+      </button>
+    </div>
+
+    <!-- Mensaje de éxito (oculto por defecto) -->
+    <div class="form-success" id="form-success">
+      <div class="form-success-icon">🧵</div>
+      <p class="form-success-text">¡Recibimos tu idea!</p>
+      <p class="form-success-sub">Nos pondremos en contacto contigo pronto para comenzar a co-crear juntos.</p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+  <div>
+    <div class="footer-brand">SAQISQA <span>22</span></div>
+    <div class="footer-tagline">Tu concepto, nuestras manos, una pieza única.</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#adn">Esencia</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <div class="footer-copy">
+    © 2025 Saqisqa 22<br>Hecho con alma en Lima, Perú 🇵🇪
+  </div>
+</footer>
+
+
+<!-- Script externo — al final del body para mejor rendimiento -->
+<script src="main.js"></script>
 
 </body>
 </html>
