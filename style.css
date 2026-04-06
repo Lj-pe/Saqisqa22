@@ -962,3 +962,38 @@ footer {
   footer { padding: 2rem; flex-direction: column; text-align: center; }
   .footer-copy { text-align: center; }
 }
+/* ── NOSOTROS: imagen de manos trabajando ── */
+.frame-main {
+  background-image: url('1775439575929_image.png') !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  position: relative !important;
+}
+
+.frame-main-inner {
+  position: relative !important;
+  z-index: 2 !important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+}
+
+.frame-icon {
+  display: none !important;
+}
+
+.frame-main::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.05) 60%) !important;
+  z-index: 1 !important;
+}
+
+.frame-quote {
+  color: #fff !important;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
+}
+
+.frame-accent-sub {
+  /* Cambia "maestría" por "Saqisqa" — esto es solo visual, edita el HTML */
+}
