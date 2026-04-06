@@ -154,7 +154,15 @@ nav {
   position: relative;
   overflow: hidden;
 }
+.hero-left {
+  background-image: url('Mesadetrabajo.jpeg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
 
+.hero-left::before {
+  background: linear-gradient(to top, rgba(10,6,3,0.75) 0%, rgba(10,6,3,0.2) 100%) !important;
+}
 .hero-left {
   background: var(--charcoal);
   display: flex;
@@ -953,14 +961,4 @@ footer {
 
   footer { padding: 2rem; flex-direction: column; text-align: center; }
   .footer-copy { text-align: center; }
-}
-/* ── HERO: imagen de fondo en lado izquierdo ── */
-.hero-left {
-  background-image: url('Mesadetrabajo.jpeg') !important;
-  background-size: cover !important;
-  background-position: center !important;
-}
-
-.hero-left::before {
-  background: linear-gradient(to top, rgba(10,6,3,0.75) 0%, rgba(10,6,3,0.2) 100%) !important;
 }
