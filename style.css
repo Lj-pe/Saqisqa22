@@ -539,26 +539,40 @@ nav {
 }
 
 .frame-main {
-  inset: 0;
-  background: linear-gradient(135deg, var(--cognac-dark) 0%, var(--cognac-light) 60%, var(--gold) 100%);
+  position: relative;
+  background-image: url('1775439575929_image.png');
+  background-size: cover;
+  background-position: center top;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-.frame-main-inner { text-align: center; padding: 3rem; }
+.frame-main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.08) 60%);
+}
+
+.frame-main-inner {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  padding: 2rem;
+}
 
 .frame-icon {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  display: block;
+  display: none;
 }
 
 .frame-quote {
   font-family: 'Dancing Script', cursive;
   font-size: 1.6rem;
-  color: rgba(253,250,246,0.9);
+  color: rgba(253,250,246,0.95);
   line-height: 1.5;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
 
 .frame-accent {
@@ -584,7 +598,7 @@ nav {
   font-size: 0.55rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(245,239,230,0.5);
+  color: rgba(245,239,230,0.7);
   display: block;
   margin-top: 0.2rem;
 }
@@ -961,56 +975,4 @@ footer {
 
   footer { padding: 2rem; flex-direction: column; text-align: center; }
   .footer-copy { text-align: center; }
-}
-//* ── HERO: imagen de fondo full width ── */
-#hero {
-  display: block !important;
-  background-image: url('1775439449184_image.png') !important;
-  background-size: cover !important;
-  background-position: center !important;
-  min-height: 100vh !important;
-  position: relative !important;
-}
-
-#hero .hero-right {
-  display: none !important;
-}
-
-#hero .hero-left {
-  width: 100% !important;
-  background: linear-gradient(to top, rgba(10,6,3,0.82) 0%, rgba(10,6,3,0.15) 100%) !important;
-  min-height: 100vh !important;
-  display: flex !important;
-  align-items: flex-end !important;
-  padding: 4rem !important;
-}
-
-/* ── NOSOTROS: imagen manos con cartera ── */
-.frame-main {
-  background-image: url('Manosencartera.jpeg') !important;
-  background-size: cover !important;
-  background-position: center top !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-.frame-main::before {
-  content: '' !important;
-  position: absolute !important;
-  inset: 0 !important;
-  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 60%) !important;
-}
-
-.frame-main .frame-icon {
-  display: none !important;
-}
-
-.frame-main .frame-quote {
-  position: relative !important;
-  z-index: 2 !important;
-  color: #fff !important;
-}
-
-.frame-accent-sub {
-  /* Cambia "maestría" por "Saqisqa" — esto es solo visual, el texto lo cambias en el HTML */
 }
