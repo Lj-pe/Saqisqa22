@@ -962,7 +962,7 @@ footer {
   footer { padding: 2rem; flex-direction: column; text-align: center; }
   .footer-copy { text-align: center; }
 }
-/* ── HERO: imagen de fondo ── */
+//* ── HERO: imagen de fondo full width ── */
 #hero {
   display: block !important;
   background-image: url('1775439449184_image.png') !important;
@@ -985,18 +985,32 @@ footer {
   padding: 4rem !important;
 }
 
-/* ── NOSOTROS: imagen de manos ── */
+/* ── NOSOTROS: imagen manos con cartera ── */
 .frame-main {
   background-image: url('Manosencartera.jpeg') !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
-.frame-icon {
+.frame-main::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 60%) !important;
+}
+
+.frame-main .frame-icon {
   display: none !important;
 }
 
+.frame-main .frame-quote {
+  position: relative !important;
+  z-index: 2 !important;
+  color: #fff !important;
+}
+
 .frame-accent-sub {
-  /* Cambia "maestría" por "Saqisqa" — esto es solo texto en el HTML */
+  /* Cambia "maestría" por "Saqisqa" — esto es solo visual, el texto lo cambias en el HTML */
 }
