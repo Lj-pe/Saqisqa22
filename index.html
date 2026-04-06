@@ -31,35 +31,84 @@
 <!-- ══════════════════════════════════════
      HERO
 ════════════════════════════════════════ -->
-<section id="hero">
+<section id="hero" style="
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0;
+  background-image: url('Mesa\ de\ trabajo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+">
+  <!-- Overlay oscuro para legibilidad -->
+  <div style="
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(10, 6, 3, 0.82) 0%,
+      rgba(10, 6, 3, 0.45) 50%,
+      rgba(10, 6, 3, 0.15) 100%
+    );
+    z-index: 1;
+  "></div>
 
-  <!-- Lado izquierdo: título principal -->
-  <div class="hero-left">
-    <div class="hero-number">22</div>
-    <div class="hero-left-content">
-      <span class="hero-eyebrow">Artesanía de autor · Lima, Perú</span>
-      <h1 class="hero-title">
-        Tu idea,<br>
-        <span class="hero-title-italic">materializada.</span>
-      </h1>
-      <p class="hero-sub">Cuero &amp; Textil · Co-Creación · Piezas únicas</p>
-    </div>
-  </div>
+  <!-- Número 22 decorativo esquina superior derecha -->
+  <div style="
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem;
+    font-weight: 700;
+    color: rgba(190, 120, 50, 0.18);
+    line-height: 1;
+    z-index: 2;
+    user-select: none;
+  ">22</div>
 
-  <!-- Lado derecho: tagline + botón -->
-  <div class="hero-right">
-    <p class="hero-tagline">
-      En <strong>Saqisqa 22</strong> no fabricamos objetos; materializamos voluntades.
-      Somos el puente entre la idea abstracta y la materia noble. Creemos que el
-      verdadero lujo no está en el logo, sino en la historia que <strong>co-creamos contigo</strong>.
-    </p>
-    <div class="hero-pills">
-      <span class="pill">Hecho a mano</span>
-      <span class="pill">Pieza única</span>
-      <span class="pill">Cuero genuino</span>
-      <span class="pill">A tu medida</span>
-    </div>
-    <a href="#contacto" class="hero-btn">
+  <!-- Contenido hero -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    padding: 0 4rem 5rem 4rem;
+    max-width: 750px;
+  ">
+    <span style="
+      display: block;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.1rem;
+      color: rgba(210, 160, 90, 0.9);
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.03em;
+    ">Artesanía de autor · Lima, Perú</span>
+
+    <h1 style="
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: #fff;
+      margin: 0 0 1rem 0;
+    ">
+      Tu idea,<br>
+      <span style="font-style: italic; color: #C8895A;">materializada.</span>
+    </h1>
+
+    <p style="
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin: 0 0 2.5rem 0;
+    ">Cuero &amp; Textil · Co-Creación · Piezas únicas</p>
+
+    <a href="#contacto" class="hero-btn" style="display: inline-flex; align-items: center; gap: 0.6rem;">
       Comenzar mi proyecto
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -173,20 +222,38 @@
 ════════════════════════════════════════ -->
 <section id="nosotros">
 
-  <!-- Visual decorativo izquierda -->
-  <div class="nosotros-visual reveal">
-    <div class="nosotros-frame frame-main">
-      <div class="frame-main-inner">
-        <span class="frame-icon">🧵</span>
-        <p class="frame-quote">"Tu concepto,<br>nuestras manos,<br>una pieza única."</p>
+  <!-- Visual izquierda: imagen real de manos trabajando -->
+  <div class="nosotros-visual reveal" style="position: relative;">
+
+    <!-- Imagen principal con cita encima -->
+    <div class="nosotros-frame frame-main" style="
+      background-image: url('Manos\ en\ cartera.jpeg');
+      background-size: cover;
+      background-position: center top;
+      position: relative;
+      overflow: hidden;
+    ">
+      <!-- Overlay sutil para que el texto se lea -->
+      <div style="
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.1) 60%);
+      "></div>
+      <div class="frame-main-inner" style="position: relative; z-index: 2; align-items: flex-start;">
+        <p class="frame-quote" style="color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.5);">
+          "Tu concepto,<br>nuestras manos,<br>una pieza única."
+        </p>
       </div>
     </div>
+
+    <!-- Badge 22 Saqisqa -->
     <div class="nosotros-frame frame-accent">
       <div>
         <div class="frame-accent-text">22</div>
-        <span class="frame-accent-sub">maestría</span>
+        <span class="frame-accent-sub">Saqisqa</span>
       </div>
     </div>
+
   </div>
 
   <!-- Texto derecha -->
@@ -339,7 +406,7 @@
       </div>
       <div class="dato">
         <div class="dato-icon">✉️</div>
-        hola@saqisqa22.com
+        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a4cccbc8c5e4d7c5d5cdd7d5c596968ac7cbc9">[email&#160;protected]</a>
       </div>
       <div class="dato">
         <div class="dato-icon">⏱️</div>
@@ -449,10 +516,3 @@
     <em>Saqisqa:</em> legado en quechua · Hecho con alma en Lima, Perú 🇵🇪
   </div>
 </footer>
-
-
-<!-- Script externo — al final del body para mejor rendimiento -->
-<script src="java.js"></script>
-
-</body>
-</html>
