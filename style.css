@@ -962,38 +962,41 @@ footer {
   footer { padding: 2rem; flex-direction: column; text-align: center; }
   .footer-copy { text-align: center; }
 }
-/* ── NOSOTROS: imagen de manos trabajando ── */
-.frame-main {
-  background-image: url('Manosencartera.jpeg') !important;
+/* ── HERO: imagen de fondo ── */
+#hero {
+  display: block !important;
+  background-image: url('1775439449184_image.png') !important;
   background-size: cover !important;
-  background-position: center top !important;
+  background-position: center !important;
+  min-height: 100vh !important;
   position: relative !important;
 }
 
-.frame-main-inner {
-  position: relative !important;
-  z-index: 2 !important;
-  justify-content: flex-end !important;
-  align-items: flex-start !important;
+#hero .hero-right {
+  display: none !important;
+}
+
+#hero .hero-left {
+  width: 100% !important;
+  background: linear-gradient(to top, rgba(10,6,3,0.82) 0%, rgba(10,6,3,0.15) 100%) !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  padding: 4rem !important;
+}
+
+/* ── NOSOTROS: imagen de manos ── */
+.frame-main {
+  background-image: url('1775439575929_image.png') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 
 .frame-icon {
   display: none !important;
 }
 
-.frame-main::before {
-  content: '' !important;
-  position: absolute !important;
-  inset: 0 !important;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.05) 60%) !important;
-  z-index: 1 !important;
-}
-
-.frame-quote {
-  color: #fff !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
-}
-
 .frame-accent-sub {
-  /* Cambia "maestría" por "Saqisqa" — esto es solo visual, edita el HTML */
+  /* Cambia "maestría" por "Saqisqa" — esto es solo texto en el HTML */
 }
