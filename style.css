@@ -979,3 +979,7 @@ footer {
   footer { padding: 2rem; flex-direction: column; text-align: center; }
   .footer-copy { text-align: center; }
 }
+.frame-main {
+  min-height: 500px !important;
+  background-position: center center !important;
+}
