@@ -954,3 +954,25 @@ footer {
   footer { padding: 2rem; flex-direction: column; text-align: center; }
   .footer-copy { text-align: center; }
 }
+/* ── HERO: imagen de fondo ── */
+#hero {
+  display: block !important;
+  background-image: url('Mesadetrabajo.jpeg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  min-height: 100vh !important;
+  position: relative !important;
+}
+
+#hero .hero-right {
+  display: none !important;
+}
+
+#hero .hero-left {
+  width: 100% !important;
+  background: linear-gradient(to top, rgba(10,6,3,0.82) 0%, rgba(10,6,3,0.15) 100%) !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  padding: 4rem !important;
+}
