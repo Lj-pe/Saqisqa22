@@ -976,3 +976,8 @@ footer {
   align-items: flex-end !important;
   padding: 4rem !important;
 }
+.hero-left {
+  background-image: url('1775439449184_image.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
