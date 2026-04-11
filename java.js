@@ -1,12 +1,10 @@
 // ============================================
 //   SAQISQA 22 — Scripts principales
-//   Archivo: main.js
+//   Archivo: java.js
 // ============================================
 
 
 // ── 1. SCROLL REVEAL ──
-// Detecta cuando los elementos con clase .reveal
-// entran en pantalla y les añade la clase .visible
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
@@ -30,36 +28,64 @@ window.addEventListener('scroll', () => {
 });
 
 
-// ── 3. FORMULARIO DE CONTACTO ──
-function enviarFormulario() {
-  const nombre  = document.getElementById('nombre').value.trim();
-  const email   = document.getElementById('email').value.trim();
-  const mensaje = document.getElementById('mensaje').value.trim();
+// ── 3. FORMULARIO — envío real a tu correo ──
+const FORMSPREE_URL = 'https://formspree.io/f/mdapqjwd';
 
-  // Validación básica: nombre, email y mensaje son obligatorios
+async function enviarFormulario() {
+  const nombre  = document.getElementById('nombre').value.trim();
+  const ciudad  = document.getElementById('ciudad').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const tipo    = document.getElementById('tipo').value;
+  const mensaje = document.getElementById('mensaje').value.trim();
+  const origen  = document.getElementById('origen').value;
+
+  // ── Validación: campos obligatorios ──
   if (!nombre || !email || !mensaje) {
-    const campos = document.querySelectorAll('#form-fields input, #form-fields textarea');
-    campos.forEach(campo => {
+    document.querySelectorAll('#form-fields input, #form-fields textarea').forEach(campo => {
       if (!campo.value.trim()) {
-        campo.style.borderColor = 'rgba(194,94,58,0.7)';
-        // Quitar el borde rojo después de 2 segundos
-        setTimeout(() => {
-          campo.style.borderColor = '';
-        }, 2000);
+        campo.style.borderColor = 'rgba(194,94,58,0.8)';
+        setTimeout(() => campo.style.borderColor = '', 2500);
       }
     });
-    return; // Detener si faltan campos
+    return;
   }
 
-  // Ocultar formulario y mostrar mensaje de éxito
-  document.getElementById('form-fields').style.display  = 'none';
-  document.getElementById('form-success').style.display = 'block';
+  // ── Deshabilitar botón mientras envía ──
+  const btn = document.querySelector('.form-btn');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
 
-  // Aquí puedes conectar con un servicio real como Formspree o EmailJS
-  // Ejemplo con Formspree:
-  // fetch('https://formspree.io/f/TU_ID', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify({ nombre, email, mensaje })
-  // });
+  try {
+    const respuesta = await fetch(FORMSPREE_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        nombre:   nombre,
+        ciudad:   ciudad  || '—',
+        email:    email,
+        tipo:     tipo    || '—',
+        mensaje:  mensaje,
+        origen:   origen  || '—',
+        _subject: `✦ Nueva idea de co-creación — ${nombre}`
+      })
+    });
+
+    if (respuesta.ok) {
+      // Éxito: ocultar form y mostrar mensaje
+      document.getElementById('form-fields').style.display  = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    } else {
+      btn.disabled = false;
+      btn.textContent = '✦ Enviar mi concepto';
+      alert('Hubo un problema. Escríbenos a comercial@saqisqa22.com');
+    }
+
+  } catch (error) {
+    btn.disabled = false;
+    btn.textContent = '✦ Enviar mi concepto';
+    alert('Sin conexión. Escríbenos a comercial@saqisqa22.com');
+  }
 }
