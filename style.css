@@ -48,7 +48,7 @@ section { position: relative; }
 
 /* ── TIPOGRAFÍAS COMUNES ── */
 .section-label {
-  font-size: 0.65rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
