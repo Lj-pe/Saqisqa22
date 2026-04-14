@@ -29,7 +29,7 @@ window.addEventListener('scroll', () => {
 
 
 // ── 3. FORMULARIO — envío real a tu correo ──
-const FORMSPREE_URL = 'https://formspree.io/f/mdapqjwd';
+const FORMSPREE_URL = 'https://formspree.io/f/myklzoqb';
 
 async function enviarFormulario() {
   const nombre  = document.getElementById('nombre').value.trim();
