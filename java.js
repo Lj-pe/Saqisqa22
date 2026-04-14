@@ -39,7 +39,7 @@ async function enviarFormulario() {
   const mensaje = document.getElementById('mensaje').value.trim();
   const origen  = document.getElementById('origen').value;
 
-  // ── Validación: campos obligatorios ──
+  // ── Validación ──
   if (!nombre || !email || !mensaje) {
     document.querySelectorAll('#form-fields input, #form-fields textarea').forEach(campo => {
       if (!campo.value.trim()) {
@@ -50,10 +50,8 @@ async function enviarFormulario() {
     return;
   }
 
-  // ── Deshabilitar botón mientras envía ──
   const btn = document.querySelector('.form-btn');
   btn.disabled = true;
-  
   btn.textContent = 'Enviando...';
 
   try {
@@ -75,9 +73,14 @@ async function enviarFormulario() {
     });
 
     if (respuesta.ok) {
-      // Éxito: ocultar form y mostrar mensaje
-      document.getElementById('form-fields').style.display  = 'none';
-      document.getElementById('form-success').style.display = 'block';
+      document.getElementById('form-fields').style.display = 'none';
+
+      // 🔥 FIX: evitar error si no existe
+      const success = document.getElementById('form-success');
+      if (success) {
+        success.style.display = 'block';
+      }
+
     } else {
       btn.disabled = false;
       btn.textContent = '✦ Enviar mi concepto';
