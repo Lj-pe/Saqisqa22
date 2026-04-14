@@ -454,68 +454,61 @@
     <h3 class="form-title">Iniciar mi proyecto</h3>
     <p class="form-sub">Tu Munay empieza aquí ✦</p>
 
-    <div id="form-fields">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" placeholder="Tu nombre">
-        </div>
-        <div class="form-group">
-          <label for="ciudad">Ciudad / País</label>
-          <input type="text" id="ciudad" placeholder="Lima, Perú">
-        </div>
-      </div>
-
+      <div id="form-fields">
+    <div class="form-row">
       <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" placeholder="correo@ejemplo.com">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
       </div>
-
       <div class="form-group">
-        <label for="tipo">Tipo de pieza</label>
-        <select id="tipo">
-          <option value="" disabled selected>¿Qué te imaginas?</option>
-          <option>Bolso / Cartera</option>
-          <option>Mochila</option>
-          <option>Accesorios (billetera, llavero...)</option>
-          <option>Artículo textil</option>
-          <option>Combinación cuero + textil</option>
-          <option>Línea Saqisqa Piel</option>
-          <option>Línea Saqisqa Tejido</option>
-          <option>Experiencia Saqisqa 22 (taller)</option>
-          <option>Otro / Sorpréndeme</option>
-        </select>
+        <label for="ciudad">Ciudad / País</label>
+        <input type="text" id="ciudad" name="ciudad" placeholder="Lima, Perú">
       </div>
-
-      <div class="form-group">
-        <label for="mensaje">Cuéntame tu idea</label>
-        <textarea id="mensaje" placeholder="Describe tu visión: colores, uso, referencias, materiales que te gustan, funcionalidades específicas... No hay límites. Tu imaginación es nuestra materia prima."></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="origen">¿Cómo nos encontraste?</label>
-        <select id="origen">
-          <option value="" disabled selected>Seleccionar</option>
-          <option>Instagram</option>
-          <option>TikTok</option>
-          <option>Facebook</option>
-          <option>Recomendación</option>
-          <option>Otro</option>
-        </select>
-      </div>
-
-      <button class="form-btn" onclick="enviarFormulario()">
-        ✦ Enviar mi concepto
-      </button>
     </div>
 
-    <!-- Mensaje de éxito (oculto por defecto) -->
-    <div class="form-success" id="form-success">
-      <div class="form-success-icon">🧵</div>
-      <p class="form-success-text">¡Recibimos tu idea!</p>
-      <p class="form-success-sub">Nos pondremos en contacto contigo pronto para comenzar a co-crear juntos. Recuerda: si tú lo imaginaste, merece existir.</p>
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="correo@ejemplo.com">
     </div>
+
+    <div class="form-group">
+      <label for="tipo">Tipo de pieza</label>
+      <select id="tipo" name="tipo">
+        <option value="" disabled selected>¿Qué te imaginas?</option>
+        <option>Bolso / Cartera</option>
+        <option>Mochila</option>
+        <option>Accesorios (billetera, llavero...)</option>
+        <option>Artículo textil</option>
+        <option>Combinación cuero + textil</option>
+        <option>Línea Saqisqa Piel</option>
+        <option>Línea Saqisqa Tejido</option>
+        <option>Experiencia Saqisqa 22 (taller)</option>
+        <option>Otro / Sorpréndeme</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="mensaje">Cuéntame tu idea</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Describe tu visión: colores, uso, referencias, materiales que te gustan, funcionalidades específicas... No hay límites. Tu imaginación es nuestra materia prima."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="origen">¿Cómo nos encontraste?</label>
+      <select id="origen" name="origen">
+        <option value="" disabled selected>Seleccionar</option>
+        <option>Instagram</option>
+        <option>TikTok</option>
+        <option>Facebook</option>
+        <option>Recomendación</option>
+        <option>Otro</option>
+      </select>
+    </div>
+
+    <button class="form-btn" onclick="enviarFormulario()">
+      ✦ Enviar mi concepto
+    </button>
   </div>
+
 
 </section>
 

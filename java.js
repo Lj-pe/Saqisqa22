@@ -53,6 +53,7 @@ async function enviarFormulario() {
   // ── Deshabilitar botón mientras envía ──
   const btn = document.querySelector('.form-btn');
   btn.disabled = true;
+  
   btn.textContent = 'Enviando...';
 
   try {
