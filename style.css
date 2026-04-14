@@ -812,7 +812,8 @@ nav {
 }
  
 .muestras-col .muestra-card {
-  height: calc((520px - 20px) / 3);
+  height: 160px;
+  flex-shrink: 0;
 }
  
 .muestras-fila .muestra-card {
@@ -1175,7 +1176,9 @@ footer {
 .muestras-col {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
+  height: 520px;
+  overflow: hidden;
 }
 
 /* Fila inferior: 3 cuadradas */
