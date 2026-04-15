@@ -642,6 +642,51 @@ nav {
 }
 
 /* ── REDES SOCIALES ── */
+
+
+/* GRID */
+.redes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* TARJETA */
+.red-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.red-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ICONO (AQUÍ CONTROLAS TODO 🔥) */
+.red-icon img {
+  width: 40px;   /* 👈 cambia esto para todos */
+  height: 40px;  /* 👈 cambia esto para todos */
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.red-name {
+  font-weight: 600;
+  color: #fff;
+}
+
+.red-handle {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
 #redes {
   background: var(--cream);
   padding: 5rem 4rem;
