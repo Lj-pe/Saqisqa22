@@ -1066,7 +1066,10 @@ footer {
   color: var(--white);
 }
 
-.footer-brand span { color: var(--cognac-light); }
+.footer-brand span { 
+  color: var(--cognac-light); 
+  font-size: 1.2rem;
+}
 
 .footer-tagline {
   font-family: 'Dancing Script', cursive;
