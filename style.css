@@ -106,6 +106,7 @@ nav {
 .nav-logo span {
   font-weight: 400;
   color: var(--cognac);
+  font-size: inherit;
 }
 
 .nav-links {
