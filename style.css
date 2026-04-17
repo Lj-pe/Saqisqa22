@@ -829,7 +829,6 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   max-width: 1200px;
-  margin: 0 auto 48px;
 }
  
 .muestra-card {
