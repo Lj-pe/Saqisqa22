@@ -813,9 +813,6 @@ nav {
   grid-template-columns: 2fr 1fr;
   gap: 10px;
   margin-bottom: 10px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
  
 .muestras-col {
@@ -828,8 +825,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  max-width: 1200px;
-  margin: 0 auto 48px;
+  margin-bottom: 48px;
 }
  
 .muestra-card {
