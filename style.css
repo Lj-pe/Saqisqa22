@@ -853,7 +853,7 @@ nav {
 }
  
 .muestra-grande {
-  height: 570px;
+  height: 600px;
 }
  
 .muestras-col .muestra-card {
@@ -1225,7 +1225,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 570px;
+  height: 600px;
   overflow: hidden;
 }
 
