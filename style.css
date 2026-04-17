@@ -826,7 +826,7 @@ nav {
  
 .muestras-fila {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   max-width: 1200px;
   margin: 0 auto 48px;
@@ -853,7 +853,7 @@ nav {
 }
  
 .muestra-grande {
-  height: 650px;
+  height: 700px;
 }
  
 .muestras-col .muestra-card {
@@ -1225,7 +1225,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 650px;
+  height: 700px;
   overflow: hidden;
 }
 
