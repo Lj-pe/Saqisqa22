@@ -52,14 +52,12 @@ window.addEventListener('scroll', () => {
     document.body.style.overflow = 'hidden';
   }
  
-  function closeMenu(scroll) {
-  btn.classList.remove('open');
-  navLinks.classList.remove('open');
-  overlay.classList.remove('open');
-  setTimeout(() => {
+  function closeMenu() {
+    btn.classList.remove('open');
+    navLinks.classList.remove('open');
+    overlay.classList.remove('open');
     document.body.style.overflow = '';
-  }, 350); // espera q termine la animación del menú
-}
+  }
  
   btn.addEventListener('click', () => {
     btn.classList.contains('open') ? closeMenu() : openMenu();
