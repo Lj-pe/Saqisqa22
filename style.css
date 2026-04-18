@@ -996,8 +996,7 @@ nav {
 }
 
 .form-sub {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: rgba(245,239,230,0.45);
   margin-bottom: 2rem;
 }
@@ -1467,16 +1466,14 @@ footer {
   .muestras-grid { grid-template-columns: 1fr; margin-top: 2rem; }
   .muestra-grande { min-height: 280px; height: 280px; }
   .muestras-col {
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
     height: auto;
-    overflow-x: auto;
+    overflow-x: unset;
     gap: 8px;
-    padding-bottom: 4px;
   }
-  .muestras-col .muestra-card { flex: 0 0 calc(33.33% - 6px); height: 130px; min-height: 130px; }
-  .muestras-fila { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
-  .muestras-fila .muestra-card { height: 180px; aspect-ratio: unset; }
+  .muestras-col .muestra-card { width: 100%; height: 260px; min-height: unset; flex: unset; }
+  .muestras-fila { grid-template-columns: 1fr; gap: 8px; margin-top: 8px; }
+  .muestras-fila .muestra-card { height: 260px; aspect-ratio: unset; }
   .muestra-overlay { opacity: 1; }
  
   /* — Contacto — */
