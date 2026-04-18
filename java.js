@@ -33,12 +33,14 @@ window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   const navLinks = document.querySelector('.nav-links');
  
+  // Crear botón hamburguesa
   const btn = document.createElement('button');
   btn.className = 'nav-hamburger';
   btn.setAttribute('aria-label', 'Abrir menú');
   btn.innerHTML = '<span></span><span></span><span></span>';
   nav.appendChild(btn);
  
+  // Crear overlay
   const overlay = document.createElement('div');
   overlay.className = 'nav-overlay';
   document.body.appendChild(overlay);
@@ -47,14 +49,14 @@ window.addEventListener('scroll', () => {
     btn.classList.add('open');
     navLinks.classList.add('open');
     overlay.classList.add('open');
-    // NO bloqueamos el scroll del body
+    document.body.style.overflow = 'hidden';
   }
  
   function closeMenu() {
     btn.classList.remove('open');
     navLinks.classList.remove('open');
     overlay.classList.remove('open');
-    // NO tocamos el overflow del body
+    document.body.style.overflow = '';
   }
  
   btn.addEventListener('click', () => {
@@ -63,33 +65,19 @@ window.addEventListener('scroll', () => {
  
   overlay.addEventListener('click', closeMenu);
  
-  // Al clickear un link: cerrar menú y navegar
+  // Cerrar al hacer click en un link
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
- 
-      if (href && href.startsWith('#')) {
-        e.preventDefault();
-        closeMenu();
-        setTimeout(() => {
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 350);
-      } else {
-        closeMenu();
-      }
-    });
+    link.addEventListener('click', closeMenu);
   });
  
+  // Cerrar si se agranda la ventana
   window.addEventListener('resize', () => {
     if (window.innerWidth > 900) closeMenu();
   });
 })();
  
  
-// ── 4. FORMULARIO ──
+// ── 4. FORMULARIO — envío real a tu correo ──
 const FORMSPREE_URL = 'https://formspree.io/f/myklzoqb';
  
 async function enviarFormulario() {
@@ -100,6 +88,7 @@ async function enviarFormulario() {
   const mensaje = document.getElementById('mensaje').value.trim();
   const origen  = document.getElementById('origen').value;
  
+  // ── Validación ──
   if (!nombre || !email || !mensaje) {
     document.querySelectorAll('#form-fields input, #form-fields textarea').forEach(campo => {
       if (!campo.value.trim()) {
@@ -134,8 +123,12 @@ async function enviarFormulario() {
  
     if (respuesta.ok) {
       document.getElementById('form-fields').style.display = 'none';
+ 
       const success = document.getElementById('form-success');
-      if (success) success.style.display = 'block';
+      if (success) {
+        success.style.display = 'block';
+      }
+ 
     } else {
       btn.disabled = false;
       btn.textContent = '✦ Enviar mi concepto';
@@ -148,3 +141,4 @@ async function enviarFormulario() {
     alert('Sin conexión. Escríbenos a comercial@saqisqa22.com');
   }
 }
+ 
