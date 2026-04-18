@@ -805,7 +805,7 @@ nav {
   background: #1e1610;
 }
  
-.muestra-grande { min-height: 420px; }
+.muestra-grande { min-height: 400px; }
 .muestras-col .muestra-card { flex: 1; min-height: 130px; }
 .muestras-fila .muestra-card { aspect-ratio: 4/3; }
  
