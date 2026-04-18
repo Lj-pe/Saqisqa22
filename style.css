@@ -1054,8 +1054,8 @@ footer {
 }
  
 .footer-tagline {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1rem;
+  font-family: 'Dancing Script';
+  font-size: 0.8rem;
   color: rgba(245,239,230,0.4);
   margin-top: 0.2rem;
 }
