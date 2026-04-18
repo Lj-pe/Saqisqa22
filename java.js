@@ -40,10 +40,6 @@ window.addEventListener('scroll', () => {
   btn.innerHTML = '<span></span><span></span><span></span>';
   nav.appendChild(btn);
  
-  // Crear overlay
-  const overlay = document.createElement('div');
-  overlay.className = 'nav-overlay';
-  document.body.appendChild(overlay);
  
   function openMenu() {
     btn.classList.add('open');
@@ -63,7 +59,7 @@ window.addEventListener('scroll', () => {
     btn.classList.contains('open') ? closeMenu() : openMenu();
   });
  
-  overlay.addEventListener('click', closeMenu);
+ 
  
   // Cerrar al hacer click en un link
   navLinks.querySelectorAll('a').forEach(link => {

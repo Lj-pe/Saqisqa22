@@ -183,19 +183,7 @@ nav {
 .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-hamburger.open span:nth-child(2) { opacity: 0; }
 .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
- 
-.nav-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  z-index: 140;
-  pointer-events: none;
-}
-.nav-overlay.open { 
-  display: block; 
-  pointer-events: all;
-}
+
  
  
 /* ══════════════════════════════════════════
