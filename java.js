@@ -127,3 +127,25 @@ async function enviarFormulario() {
     alert('Sin conexión. Escríbenos a comercial@saqisqa22.com');
   }
 }
+// ── 5. GALERÍA — tap para mostrar texto en mobile ──
+document.querySelectorAll('.muestra-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const overlay = card.querySelector('.muestra-overlay');
+    if (!overlay) return;
+
+    // Si ya está activo, lo cierra
+    if (card.classList.contains('tapped')) {
+      card.classList.remove('tapped');
+      overlay.style.opacity = '0';
+    } else {
+      // Cierra todos los demás
+      document.querySelectorAll('.muestra-card.tapped').forEach(other => {
+        other.classList.remove('tapped');
+        other.querySelector('.muestra-overlay').style.opacity = '0';
+      });
+      // Abre este
+      card.classList.add('tapped');
+      overlay.style.opacity = '1';
+    }
+  });
+});
