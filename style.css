@@ -1332,8 +1332,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .muestra-overlay { opacity: 1; }
-}
+  
 /* ============================================================
    SAQISQA 22 — Parche Mobile
    ============================================================ */
