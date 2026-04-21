@@ -1331,7 +1331,7 @@ footer {
   .muestras-fila {
     grid-template-columns: repeat(3, 1fr);
   }
-
+}  
   
 /* ============================================================
    SAQISQA 22 — Parche Mobile
