@@ -1454,7 +1454,7 @@ footer {
  
   /* — Público — */
   #publico { padding: 4rem 1.5rem !important; }
-#publico .pilares-grid { grid-template-columns: repeat(3, 1fr); }
+  #publico .pilares-grid { grid-template-columns: 1fr; }
  
   /* — Redes — */
   #redes { padding: 4rem 1.5rem; }
