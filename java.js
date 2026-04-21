@@ -148,7 +148,3 @@ if (window.matchMedia('(max-width: 900px)').matches) {
     });
   });
 }
-Y en tu mobile-fix.css asegúrate de que la línea que pusimos antes no esté:
-css/* Borrar esta línea si la tienes: */
-.muestra-overlay { opacity: 1; }
-Así en mobile los textos están ocultos por defecto y aparecen al tocar. En desktop siguen con hover normal. ✅
