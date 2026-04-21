@@ -393,6 +393,12 @@ nav {
   background: transparent;
 }
 
+#publico .pilares-grid {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .pilar {
   background: var(--white);
   padding: 2.5rem 2rem;
@@ -1453,8 +1459,8 @@ footer {
   /* — Público — */
   #publico { padding: 4rem 1.5rem !important; }
   #publico .pilares-grid {
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 900px;
+  grid-template-columns: 1fr;
+  max-width: 100%;
   margin: 0 auto;
 }
  
