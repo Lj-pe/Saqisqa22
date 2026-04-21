@@ -1454,7 +1454,11 @@ footer {
  
   /* — Público — */
   #publico { padding: 4rem 1.5rem !important; }
-  #publico .pilares-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  #publico .pilares-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  max-width: 900px;
+  margin: 0 auto;
+}
  
   /* — Redes — */
   #redes { padding: 4rem 1.5rem; }
