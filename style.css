@@ -443,9 +443,11 @@ nav {
 }
 
 .pilar-title span{
-    font-weight: 400;
-    color: var(--cognac);
-    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 0.7rem;
 }
 .pilar-text {
   font-size: 0.8rem;
