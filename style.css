@@ -442,6 +442,11 @@ nav {
   margin-bottom: 0.7rem;
 }
 
+.pilar-title span{
+    font-weight: 400;
+    color: var(--cognac);
+    font-size: 1.8rem;
+}
 .pilar-text {
   font-size: 0.8rem;
   line-height: 1.7;
