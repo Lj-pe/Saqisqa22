@@ -402,10 +402,11 @@ nav {
 .pilar {
   background: var(--white);
   padding: 2.5rem 2rem;
-  position: center;
+  position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
   cursor: default;
+  text-align: center;
 }
 
 .pilar::before {
