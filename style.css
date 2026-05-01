@@ -982,8 +982,8 @@ nav {
 }
 
 .dato-icon {
-  width: 36px; height: 36px;
-  border: 1px solid rgba(160,82,45,0.4);
+  width: 55x; height: 55px;
+  border: 2px solid rgba(160,82,45,0.4);
   border-radius: 50%;
   display: flex;
   align-items: center;
