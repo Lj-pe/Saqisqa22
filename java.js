@@ -77,7 +77,7 @@ window.addEventListener('scroll', () => {
  
  
 // ── 4. FORMULARIO → WHATSAPP ──
-const WHATSAPP_NUMBER = '51999999999'; // ← cambia por tu número real
+const WHATSAPP_NUMBER = '51982675563'; // ← cambia por tu número real
 
 function enviarFormulario() {
   const nombre  = document.getElementById('nombre').value.trim();
