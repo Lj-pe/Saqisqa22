@@ -76,17 +76,17 @@ window.addEventListener('scroll', () => {
 })();
  
  
-// ── 4. FORMULARIO ──
-const FORMSPREE_URL = 'https://formspree.io/f/myklzoqb';
- 
-async function enviarFormulario() {
+// ── 4. FORMULARIO → WHATSAPP ──
+const WHATSAPP_NUMBER = '51999999999'; // ← cambia por tu número real
+
+function enviarFormulario() {
   const nombre  = document.getElementById('nombre').value.trim();
   const ciudad  = document.getElementById('ciudad').value.trim();
   const email   = document.getElementById('email').value.trim();
   const tipo    = document.getElementById('tipo').value;
   const mensaje = document.getElementById('mensaje').value.trim();
   const origen  = document.getElementById('origen').value;
- 
+
   if (!nombre || !email || !mensaje) {
     document.querySelectorAll('#form-fields input, #form-fields textarea').forEach(campo => {
       if (!campo.value.trim()) {
@@ -96,36 +96,14 @@ async function enviarFormulario() {
     });
     return;
   }
- 
-  const btn = document.querySelector('.form-btn');
-  btn.disabled = true;
-  btn.textContent = 'Enviando...';
- 
-  try {
-    const respuesta = await fetch(FORMSPREE_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        nombre, ciudad: ciudad || '—', email,
-        tipo: tipo || '—', mensaje, origen: origen || '—',
-        _subject: `✦ Nueva idea de co-creación — ${nombre}`
-      })
-    });
- 
-    if (respuesta.ok) {
-      document.getElementById('form-fields').style.display = 'none';
-      const success = document.getElementById('form-success');
-      if (success) success.style.display = 'block';
-    } else {
-      btn.disabled = false;
-      btn.textContent = '✦ Enviar mi concepto';
-      alert('Hubo un problema. Escríbenos a comercial@saqisqa22.com');
-    }
-  } catch (error) {
-    btn.disabled = false;
-    btn.textContent = '✦ Enviar mi concepto';
-    alert('Sin conexión. Escríbenos a comercial@saqisqa22.com');
-  }
+
+  const texto = `¡Hola Saqisqa 22! 👋 Quiero comenzar un proyecto:\n\n*Nombre:* ${nombre}\n*Ciudad:* ${ciudad || '—'}\n*Email:* ${email}\n*Tipo de pieza:* ${tipo || '—'}\n*Mi idea:* ${mensaje}\n*¿Cómo los encontré?:* ${origen || '—'}`;
+
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`, '_blank');
+
+  document.getElementById('form-fields').style.display = 'none';
+  const success = document.getElementById('form-success');
+  if (success) success.style.display = 'block';
 }
 // ── 5. GALERÍA — tap en mobile ──
 if (window.matchMedia('(max-width: 900px)').matches) {
